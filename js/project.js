@@ -5,9 +5,20 @@ $(".gallery").masonry({
 });
 
 $(".touchevents .thumbnail").hammer().bind("press", function() {
-// Your code here
+	var query = Modernizr.mq('(max-width: 800px)');
+ 	if (query) {
+ 		$(".thumbnail").addClass(".open")
+	}
 });
 
+// Only for devices with touch events, when the user swipes on a thumbnail, hide the caption by removing the class "open" on the thumbnail that fired the event. Optionally, add an animation to the left position to animate the "swipe" effect.
+
 $(".touchevents .thumbnail").hammer().bind("swipe", function() {
-// Your code here
+	var query = Modernizr.mq('(max-width: 800px)');
+ 	if (query) {
+ 		$(".thumbnail").removeClass(".open")
+	}
 });
+ 
+ // lost caption in lightbox 
+$(".lb").simpleLightbox();

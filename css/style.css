@@ -54,10 +54,16 @@ img {
 	.thumbnail {
 		width: 49%;
 	}
+	.thumbnail:hover .caption {
+	display: none;
+}
 }
 
 @media only screen and (max-width: 500px){
 	.thumbnail {
 		width: 99%;
 	}
+	.thumbnail:hover .caption {
+	display: none;
+}
 }
